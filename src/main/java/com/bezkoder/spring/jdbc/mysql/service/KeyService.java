@@ -85,7 +85,7 @@ public class KeyService {
         return result;
     }
 
-    @Scheduled(fixedRate = 60000) // 60 sec
+    @Scheduled(fixedRate = 120000) // 120 sec
     public void releaseBlockedKeys() {
         int updatedRows = keyRepository.releaseBlockedKeys();
         logger.info("Released blocked keys. Number of keys released: {}", updatedRows);
